@@ -2,14 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const createError = require('http-errors');
 
-const routes = require('./routes'); 
+const routes = require('../route/routes');
 
 const app = express();
 const port = 8000;
 
 // MIDDLEWARE
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 
 // Enable CORS
 app.use((req, res, next) => {
@@ -22,18 +22,18 @@ app.use((req, res, next) => {
 // ROUTES
 app.use(routes);
 
-
 // ERROR HANDLING
 app.use((req, res, next) => {
-  next(createError.NotFound('Path URL Tidak Ditemukan'))
+  next(new createError.NotFound('Path URL Tidak Ditemukan'));
 });
 
+
 app.use((err, req, res, next) => {
-  const { 
-    status = 500, 
-    message 
+  const {
+    status = 500,
+    message,
   } = err;
-  
+
   const errorResponse = {
     error: {
       status,
