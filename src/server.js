@@ -52,7 +52,6 @@ app.use((err, req, res, next) => {
   res.status(status).json(errorResponse);
 });
 
-
 app.listen(port, () => {
   console.log(`Server berjalan pada http://localhost:${port}`);
 });
