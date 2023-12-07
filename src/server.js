@@ -5,7 +5,7 @@ const createError = require('http-errors');
 const routes = require('../route/routes');
 
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8080;
 
 // MIDDLEWARE
 app.use(bodyParser.json());
