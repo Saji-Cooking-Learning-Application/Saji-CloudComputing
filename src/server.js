@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const createError = require('http-errors');
-
 const routes = require('../route/routes');
 const dotenv = require('dotenv');
 
