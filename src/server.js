@@ -3,6 +3,9 @@ const bodyParser = require('body-parser');
 const createError = require('http-errors');
 
 const routes = require('../route/routes');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -53,5 +56,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server berjalan pada http://localhost:${port}`);
+  console.log(`Server berjalan pada port: ${port}`);
 });
