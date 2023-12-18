@@ -5,12 +5,6 @@ const bcrypt = require('bcrypt');
 
 dotenv.config();
 
-const base = (req, res) => {
-  res.status(200).json({
-    message: 'Ini adalah Rute Awal',
-  });
-};
-
 const register = (req, res) => {
   try {
     const sqlSelect = 'SELECT * FROM users WHERE username=?';
@@ -86,7 +80,7 @@ const register = (req, res) => {
                 } else {
                   return res.status(201).json({
                     code: 201,
-                    status: 'CREATED',
+                    status: 'OK',
                     message: 'Berhasil Registrasi',
                     data: null,
                   });
@@ -151,9 +145,9 @@ const login = (req, res) => {
           const refreshToken = jwt.sign(loguser, process.env.REFRESH_TOKEN_KEY);
           const response = {
             code: 200,
-            status: 'SUCCESS',
+            status: 'OK',
             user_id: result[0].id,
-            message: 'Login berhasil',
+            message: 'Login Berhasil',
             accessToken: accessToken,
             refreshToken: refreshToken,
           };
@@ -162,7 +156,7 @@ const login = (req, res) => {
           return res.status(400).json({
             code: 400,
             status: 'BAD REQUEST',
-            message: 'Password salah 2',
+            message: 'Password Salah',
             data: null,
           });
         };
@@ -204,7 +198,6 @@ const refresh = (req, res) => {
 };
 
 module.exports = {
-  base,
   register,
   login,
   refresh,
