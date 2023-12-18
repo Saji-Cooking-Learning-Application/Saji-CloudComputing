@@ -17,8 +17,8 @@ router.post('/register', validate(registerValidate), register);
 router.post('/login', validate(loginValidate), login);
 router.post('/refresh', refresh);
 
-router.get('/resep', resep);
-router.get('/resep/:id', resepDetailByID);
+router.get('/resep', auth, resep);
+router.get('/resep/:id', auth, resepDetailByID);
 
 router.get('/user', auth, (req, res) => {
   sql = 'SELECT * FROM users;';
