@@ -7,7 +7,7 @@ dotenv.config();
 
 const register = (req, res) => {
   try {
-    const sqlSelect = 'SELECT * FROM users WHERE username=?';
+    const sqlSelect = 'SELECT * FROM users WHERE username=?;';
     const {nama, username, email, hp, password} = req.body;
 
     // Check if the username already exists
@@ -41,7 +41,7 @@ const register = (req, res) => {
           }
 
           // Insert user into the 'users' table
-          const sqlInsertUser = 'INSERT INTO users (username, password, status) VALUES (?, ?, 1)';
+          const sqlInsertUser = 'INSERT INTO users (username, password, status) VALUES (?, ?, 1);';
           conn.query(sqlInsertUser, [username, hash], (err, result) => {
             if (err) {
               return res.status(400).json({
@@ -53,7 +53,7 @@ const register = (req, res) => {
             }
 
             // Retrieve the latest inserted ID
-            const sqlSelectLatestID = 'SELECT id FROM users ORDER BY id DESC LIMIT 1';
+            const sqlSelectLatestID = 'SELECT id FROM users ORDER BY id DESC LIMIT 1;';
             conn.query(sqlSelectLatestID, (err, result) => {
               if (err) {
                 return res.status(500).json({
@@ -67,7 +67,7 @@ const register = (req, res) => {
               const latestIdUsers = result[0].id;
 
               // Insert user details into the 'detail_users' table
-              const sqlInsertDetail = 'INSERT INTO detail_users (id_users, nama, email, no_hp) VALUES (?, ?, ?, ?)';
+              const sqlInsertDetail = 'INSERT INTO detail_users (id_users, nama, email, no_hp) VALUES (?, ?, ?, ?);';
               conn.query(sqlInsertDetail, [latestIdUsers, nama, email, hp], (err, result) => {
                 if (err) {
                   console.log(err);

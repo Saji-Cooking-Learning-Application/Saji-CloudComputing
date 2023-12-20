@@ -21,11 +21,10 @@ const resep = (req, res) => {
       }
     });
   } catch (error) {
-    console.error('Error during login:', error);
     res.status(500).json({
       code: 500,
       status: 'INTERNAL SERVER ERROR',
-      message: 'Internal server error during login',
+      message: 'Internal server error during get resep',
       data: null,
     });
   };
@@ -35,7 +34,7 @@ const resepDetailByID = (req, res) => {
   const resepID = req.params.id;
   try {
     const sql = 'SELECT menu.*, foto_menu.foto FROM menu INNER JOIN foto_menu ON menu.id = foto_menu.id_menu WHERE menu.id=?;';
-    const sqlResep = 'SELECT bahan.nama_bahan, resep.takaran, resep.unit FROM resep INNER JOIN bahan ON resep.id_bahan = bahan.id WHERE resep.id_menu = ?;';
+    const sqlResep = 'SELECT bahan.id, bahan.nama_bahan, resep.takaran, resep.unit FROM resep INNER JOIN bahan ON resep.id_bahan = bahan.id WHERE resep.id_menu = ?;';
 
     conn.query(sql, [resepID], (err, result) => {
       if (err) {
@@ -91,11 +90,10 @@ const resepDetailByID = (req, res) => {
       }
     });
   } catch (error) {
-    console.error('Error during login:', error);
     res.status(500).json({
       code: 500,
       status: 'INTERNAL SERVER ERROR',
-      message: 'Internal server error during login',
+      message: 'Internal server error during get detail resep',
       data: null,
     });
   };

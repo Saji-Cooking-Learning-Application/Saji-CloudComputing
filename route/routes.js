@@ -4,6 +4,7 @@ const {registerValidate} = require('../validation/registerSchema');
 const {validate} = require('../middleware/validate');
 const {register, login, refresh} = require('../controller/authController');
 const {resep, resepDetailByID} = require('../controller/resepController');
+const {bahan, bahanDetailByID} = require('../controller/bahanController');
 const auth = require('../middleware/authentication');
 const router = new express.Router();
 const conn = require('../config/connection');
@@ -19,6 +20,9 @@ router.post('/refresh', refresh);
 
 router.get('/resep', auth, resep);
 router.get('/resep/:id', auth, resepDetailByID);
+
+router.get('/bahan', auth, bahan);
+router.get('/bahan/:id', auth, bahanDetailByID);
 
 router.get('/user', auth, (req, res) => {
   sql = 'SELECT * FROM users;';
