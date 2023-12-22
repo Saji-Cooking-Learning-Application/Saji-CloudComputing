@@ -5,7 +5,7 @@
 
 https://saji-cc-api-2srtjzs7ba-et.a.run.app
 
-### REGISTER
+### Register
 
 - URL
     
@@ -13,18 +13,15 @@ https://saji-cc-api-2srtjzs7ba-et.a.run.app
     
 - METHOD
     
-   - POST
+   - `POST`
     
 - REQUEST BODY
-```json
-{
-  "username": "string",
-  "password": "string",
-  "nama": "string"
-  "email": "user@example.com"
-  "hp": "int"
-}
-  ```  
+  - `username` as `string`
+  - `password`as `string`
+  - `nama` as `string`
+  - `email` as `user@example.com`
+  - `hp` as `int`
+     
 - RESPONSE
     
 ```json
