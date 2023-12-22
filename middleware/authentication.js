@@ -12,9 +12,11 @@ const auth = (req, res, next) => {
   }
   try {
     const decoded = jwt.verify(token, process.env.SECRET_KEY);
-    console.log(decoded);
     req.username = decoded.username;
     req.id = decoded.id;
+
+    sessionUsername = req.username;
+    sessionID = req.id;
     next();
   } catch (err) {
     return res.status(403).json({

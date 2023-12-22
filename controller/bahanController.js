@@ -8,14 +8,14 @@ const bahan = (req, res) => {
         return res.status(500).json({
           code: 500,
           status: 'INTERNAL SERVER ERROR',
-          message: 'Error querying the database',
+          message: 'Unable to retrieve data from the database',
           data: null,
         });
       } else {
         return res.status(201).json({
           code: 201,
           status: 'OK',
-          message: 'Data bahan didapatkan',
+          message: 'Ingredient data obtained successfully',
           data: result,
         });
       }
@@ -24,7 +24,7 @@ const bahan = (req, res) => {
     res.status(500).json({
       code: 500,
       status: 'INTERNAL SERVER ERROR',
-      message: 'Internal server error during get bahan',
+      message: 'Internal server error while fetching ingredients',
       data: null,
     });
   };
@@ -53,7 +53,7 @@ const bahanDetailByID = (req, res) => {
         return res.status(201).json({
           code: 201,
           status: 'OK',
-          message: 'Detail Data bahan didapatkan',
+          message: 'Ingredient details obtained successfully',
           data: result,
         });
       }
@@ -62,7 +62,7 @@ const bahanDetailByID = (req, res) => {
     res.status(500).json({
       code: 500,
       status: 'INTERNAL SERVER ERROR',
-      message: 'Internal server error during get detail bahan',
+      message: 'Internal server error while fetching ingredient details',
       data: null,
     });
   };

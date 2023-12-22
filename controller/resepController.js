@@ -8,14 +8,14 @@ const resep = (req, res) => {
         return res.status(500).json({
           code: 500,
           status: 'INTERNAL SERVER ERROR',
-          message: 'Error querying the database',
+          message: 'Unable to retrieve data from the database',
           data: null,
         });
       } else {
         return res.status(201).json({
           code: 201,
           status: 'OK',
-          message: 'Data resep didapatkan',
+          message: 'Recipe data obtained successfully',
           data: result,
         });
       }
@@ -24,7 +24,7 @@ const resep = (req, res) => {
     res.status(500).json({
       code: 500,
       status: 'INTERNAL SERVER ERROR',
-      message: 'Internal server error during get resep',
+      message: 'Internal server error while fetching recipes',
       data: null,
     });
   };
@@ -41,7 +41,7 @@ const resepDetailByID = (req, res) => {
         return res.status(500).json({
           code: 500,
           status: 'INTERNAL SERVER ERROR',
-          message: 'Error querying the database',
+          message: 'Unable to retrieve data from the database',
           data: null,
         });
       } else if (result.length === 0) { // Handle ID not found
@@ -57,7 +57,7 @@ const resepDetailByID = (req, res) => {
             return res.status(500).json({
               code: 500,
               status: 'INTERNAL SERVER ERROR',
-              message: 'Error querying the database',
+              message: 'Unable to retrieve data from the database',
               data: null,
             });
           } else {
@@ -73,7 +73,7 @@ const resepDetailByID = (req, res) => {
             const responseData = {
               code: 201,
               status: 'OK',
-              message: 'Detail resep didapatkan',
+              message: 'Recipe details obtained successfully',
               data: {
                 id,
                 // eslint-disable-next-line camelcase
@@ -93,7 +93,7 @@ const resepDetailByID = (req, res) => {
     res.status(500).json({
       code: 500,
       status: 'INTERNAL SERVER ERROR',
-      message: 'Internal server error during get detail resep',
+      message: 'Internal server error while fetching recipe details',
       data: null,
     });
   };

@@ -16,7 +16,7 @@ const register = (req, res) => {
         return res.status(500).json({
           code: 500,
           status: 'INTERNAL SERVER ERROR',
-          message: 'Error querying the database',
+          message: 'Unable to retrieve data from the database',
           data: null,
         });
       }
@@ -25,7 +25,7 @@ const register = (req, res) => {
         return res.status(409).json({
           code: 400,
           status: 'BAD REQUEST',
-          message: 'Username sudah digunakan',
+          message: 'Username is already in use',
           data: null,
         });
       } else {
@@ -74,14 +74,14 @@ const register = (req, res) => {
                   return res.status(400).json({
                     code: 400,
                     status: 'BAD REQUEST',
-                    message: 'Error inserting data into the detail_users table',
+                    message: 'Error inserting data into the detail users table',
                     data: null,
                   });
                 } else {
                   return res.status(201).json({
                     code: 201,
                     status: 'OK',
-                    message: 'Berhasil Registrasi',
+                    message: 'Registration successful',
                     data: null,
                   });
                 }
@@ -119,7 +119,7 @@ const login = (req, res) => {
         return res.status(400).json({
           code: 400,
           status: 'BAD REQUEST',
-          message: 'username tidak sesuai',
+          message: 'Invalid username',
           data: null,
         });
       };
@@ -147,7 +147,7 @@ const login = (req, res) => {
             code: 200,
             status: 'OK',
             user_id: result[0].id,
-            message: 'Login Berhasil',
+            message: 'Login successful',
             accessToken: accessToken,
             refreshToken: refreshToken,
           };
@@ -156,7 +156,7 @@ const login = (req, res) => {
           return res.status(400).json({
             code: 400,
             status: 'BAD REQUEST',
-            message: 'Password Salah',
+            message: 'Incorrect password',
             data: null,
           });
         };
@@ -177,13 +177,13 @@ const refresh = (req, res) => {
   const refreshToken = req.body.refreshToken;
 
   if (!refreshToken) {
-    return res.status(401).json({message: 'Refresh token tidak ditemukan'});
+    return res.status(401).json({message: 'Refresh token not found'});
   }
 
   jwt.verify(refreshToken, process.env.REFRESH_TOKEN_KEY, (err, decoded) => {
     if (err) {
       return res.status(403).json({
-        message: 'Gagal untuk autentikasi refresh token',
+        message: 'Failed to authenticate refresh token',
       });
     }
 

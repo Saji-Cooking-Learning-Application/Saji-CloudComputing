@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "saji-capstone-project",
+  "private_key_id": "3853582a7d088cfc099e98056d44162cd12ede45",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCHxL2Giv6slgZB\nMN+MFUavWBFxqtBAyL5oCyOhp5c4IAlE6xYlz5jDB2OezGSqXEAtA/TVwfYyqqUe\nCgNVVSFHYf4pP++cUXp1g3D1ME7RtULrSFVB8Ziw6jRBIzbtgajRgrjce+1am41N\nPNx2tp90XM2f7/80bE7/gmjyHrtgEUnuNFZzp4iLUsa73Pt/6JR39sCBXZYw4nGY\n8vyrboHikOwBHFArnX/8RAPLgkwy2Q9SdKwd+g2VNQswBOx2Pz6NMZZS27iXcVFd\n2LXahvasrRsQc+YKrKe5dsokni6Ah6RwLE/8/gudVVJqPtQ90ZaP7TuCewf1SUHL\noeHhuxYHAgMBAAECggEAJH5ts0yJSDrLU5qffDf72AYEKlmPwNo01CKqYTl7HEsA\nMtY+DcvPdBz4Wib2qBRD69W0agDI/LWBzKFEZBuN5nIgr1XQQmRkVlIOetmRVi0y\n36uBv0gBkwxhH2En0o+XoTlSF3H4SvKk+K3zVLWiBtUrMGKCZsT2NxgGvY4lL50R\n1GHtj7aM0kwo5/rhv4cMcZrMugeb0i4gIDd5qCSrbO2UrQv9e3sAlN+9RMUzoWHg\nAnU1F6AB9nLzN2enB/X708lSSLJpajSFFcn9IvbqmX/akQx0+0+cBy8bpDLoWoCc\nc/YBRh8lIronTERYNIX+u1NVzZ6WIZhLE2/0VU5kgQKBgQC92ik5SBJV61yrft79\nsHARLgW2NeILxCxbttKzJE5a1tiSVytGexHf1csI3ndpge+lct6QuIi00RIRFWHb\nEO7kxjZlI9g41L028abSGCrTNh6JLDPHS+/vy8jtGmtZuwcPAU/zdo6EsbvtOwl5\nuMl/qd5yAl0fYW2TsyeFZRFdhQKBgQC3Epf9hjRJ+vog/bFaM1Mi5sjW1rJUVrXR\nx73KHVrtW86mAdKoY7EeLPp13H98hVnuWC+wt63k4SE1ekaMooJJW/L3QgMA2yXQ\nVTBzuxfQcurR0gMdASuFmzTqAz6BzQuG81vvw5TMalSoScdO/1xyBpR3pBfO/4kv\nb75gIXolGwKBgCwFVeGuUHITrN0nAdWY/6M8JJ7nR46q4g4yChD3riNqBbWI+MPS\n7YYVMIrR6qZQNp0KUYkFAM3MXIARkSsWdg4d16cD9LLYwTboOWIlsGhg+BueYDMp\n7GyRt/kiUxnvP+e+yicNqmYiQAz1z3Cl5DLx1F5jJeyMzrecpuFLWgdxAoGBAIgV\nnj2qoPvNQFl9u3PdaxMqkmiAt5bRzd3eqEmxgIGoGPh1qm3ZjTNtI9Cw02NwjOUL\nUIgAQZc9cj4aYo7vzgFSBE2gGDNus7ElYhrlHFKq2bqWbhIFaKCsOq0pNDGwhb0O\n8WxM6jL5Z2yhSzKBx+pK0doNdFU+xm8olU9IE0+5AoGAOh7T5JS2LxVNIvRuMMiX\nIfPWDDVCAwhTgpMmdM16Hi3w+ASTFYKdRvRt2aro2nNXDb0ncGwVTNXgichsSp/Z\n7GssMo1HvkjpT2JGBsSoRPIFOQQOsN5lSDa6zefb/8+6cMVgNF/ihmgesZQoghET\n98PKebjMf4jGeKyBODomfRs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "saji-storage-bucket@saji-capstone-project.iam.gserviceaccount.com",
+  "client_id": "115387510344310375961",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/saji-storage-bucket%40saji-capstone-project.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
