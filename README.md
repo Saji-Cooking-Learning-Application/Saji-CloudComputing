@@ -1,15 +1,19 @@
 # SAJI Backend-API
 # API DOCUMENTATION
 
+### Endpoint
+
+https://saji-cc-api-2srtjzs7ba-et.a.run.app
+
 ### REGISTER
 
 - URL
     
-    /register
+    - `/register`
     
 - METHOD
     
-    POST
+   - POST
     
 - REQUEST BODY
 ```json
