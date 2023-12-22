@@ -13,12 +13,11 @@ const tutorial = (req, res) => {
           data: null,
         });
       } else {
-        const tutorialData = result.length > 0 ? result[0] : null;
         return res.status(201).json({
           code: 201,
           status: 'OK',
           message: 'Tutorial data retrieved successfully',
-          data: tutorialData,
+          data: result,
         });
       }
     });

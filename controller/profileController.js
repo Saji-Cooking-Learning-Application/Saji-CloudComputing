@@ -21,7 +21,7 @@ const getProfile = (req, res) => {
           code: 201,
           status: 'OK',
           message: 'User Profile data obtained successfully',
-          data: result[0],
+          data: result,
         });
       }
     });
