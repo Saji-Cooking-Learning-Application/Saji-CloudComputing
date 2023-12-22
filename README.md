@@ -1,10 +1,10 @@
 # SAJI Backend-API
-> # API DOCUMENTATION
+# API DOCUMENTATION
 
 ### Endpoint
 
 https://saji-cc-api-2srtjzs7ba-et.a.run.app
-<br>
+<br><br>
 
 ### Register
 
@@ -34,25 +34,21 @@ https://saji-cc-api-2srtjzs7ba-et.a.run.app
 }
 ```
     
-<br>
-### LOGIN
+<br><br>
+### Login
 
 - URL
     
-    /login
+    `/login`
     
 - METHOD
     
-    POST
+    `POST`
     
 - REQUEST BODY
     
-```json
-{
-  "username": "string",
-  "password": "string"
-}
-```
+  - `username` as `string`
+  - `password` as `string`
     
 - RESPONSE
 ```json
@@ -66,6 +62,7 @@ https://saji-cc-api-2srtjzs7ba-et.a.run.app
 }
 ```
 
+<br><br>
 ### GET USER PROFIL
 
 - URL
