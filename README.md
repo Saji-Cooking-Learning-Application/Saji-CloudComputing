@@ -1,38 +1,4 @@
-# Backend-API
-Hiya! Gabriel here, this repo is for the backend of the app (ai model not included). Some of the features :  
-- Auth
-- Article
-- Forum
-- Image resizer
-- Comment system
-
-## how to use  
-install the requirements
-```bash
-pip install -r requirements.txt
-```
-boot uvicorn
-```bash
-uvicorn main:app
-```
-or
-```bash
-python3 -m uvicorn main:app
-```
-ENV list
-```
-> PORT
-> cres (service account for cloud storage)
-> secret
-> algorithm
-> dbase
-> duser
-> dpw
-> dip
-```
-
-
-
+# SAJI Backend-API
 # API DOCUMENTATION
 
 ### REGISTER
@@ -95,6 +61,69 @@ ENV list
     "message": "Login successful",
     "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJ5dWRpYTEyMzQ1IiwiaWF0IjoxNzAzMjIwNzEwLCJleHAiOjE3MDMyMjQzMTB9.TF-Oa_bN_2uHmwKFogVmSVK4BaQvygZNZgtyD211p6s",
     "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJ5dWRpYTEyMzQ1IiwiaWF0IjoxNzAzMjIwNzEwfQ.tYhL4JyHowWmyw-S2qe7a3m0pbuffu5WKtTc9C0wi40"
+}
+```
+
+### GET USER PROFIL
+
+- URL
+    
+    /profile
+    
+- METHOD
+    
+    GET
+    
+- RESPONSE
+```json
+{
+    "code": 201,
+    "status": "OK",
+    "message": "User Profile data obtained successfully",
+    "data": [
+        {
+            "id": 3,
+            "id_users": 5,
+            "nama": "Putu Yudia",
+            "tanggal_lahir": null,
+            "alamat": null,
+            "email": "yudiaasasoqq@gmasi.com",
+            "no_hp": "0988801129938",
+            "foto": null
+        }
+    ]
+}
+```
+
+### UPDATE USER PROFILE
+
+- URL
+    
+    /profile
+    
+- METHOD
+    
+    POST
+    
+- REQUEST BODY
+    
+```json
+{
+  "nama": "string"
+  "tanggal_lahir": "date"
+  "alamat": "string"
+  "email": "user@example.com"
+  "hp": "int"
+  "foto": "blob"
+}
+```
+    
+- RESPONSE
+```json
+{
+    "code": 201,
+    "status": "OK",
+    "message": "User Profile data successfully updated"
 }
 ```
     
