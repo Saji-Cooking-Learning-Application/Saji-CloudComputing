@@ -4,6 +4,7 @@
 ### Endpoint
 
 https://saji-cc-api-2srtjzs7ba-et.a.run.app
+<br>
 
 ### Register
 
@@ -16,10 +17,10 @@ https://saji-cc-api-2srtjzs7ba-et.a.run.app
    - `POST`
     
 - REQUEST BODY
-  - `username` as `string`
-  - `password`as `string`
+  - `username` as `string`, must be unique
+  - `password`as `string`, must be at least 8 characters long and 1 kapitals
   - `nama` as `string`
-  - `email` as `user@example.com`
+  - `email` as `user@example.com`, must be email format
   - `hp` as `int`
      
 - RESPONSE
@@ -33,7 +34,7 @@ https://saji-cc-api-2srtjzs7ba-et.a.run.app
 }
 ```
     
-
+<br>
 ### LOGIN
 
 - URL
